@@ -10,7 +10,7 @@
                     Qidirish
                 </label>
                 <div class="content-search__form">
-                    <input type="text" placeholder="Qidiring">
+                    <input type="text" placeholder="Qidiring" v-model="search" @input="handleSearch">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 </div>
             </div>
@@ -21,7 +21,8 @@
             <div class="content-items">
                 <label v-if="todos.length > 0">Vazifalaringiz!</label>
                 <label v-if="todos.length === 0">Vazifa qo'shing!</label>
-                <div class="content-item" v-for="(todo, index) in todos" :key="todo.id" @click="toogleItem(index)">
+                <div class="content-item" v-for="(todo, index) in filteredTodos" :key="todo.id"
+                    @click="toogleItem(index)">
                     <p :class="`${todo.done && 'passed'}`" v-if="editingIndex !== todo.id">{{ todo.name }}</p>
                     <input type="text" v-else v-model="editingText">
                     <div class="content-item__buttons">
@@ -35,7 +36,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref, watch } from "vue"
+import { computed, onMounted, ref, watch } from "vue"
 
 const name = ref("")
 const search = ref("")
@@ -47,6 +48,16 @@ const editingText = ref("")
 
 
 const todos = ref([])
+
+const filteredTodos = computed(() => {
+    if (search.value.trim() === "") {
+        return todos.value;
+    } else {
+        return todos.value.filter(todo =>
+            todo.name.toLowerCase().includes(search.value.toLowerCase())
+        );
+    }
+});
 
 const addTodo = () => {
     if (todoName.value.trim() !== "") {
