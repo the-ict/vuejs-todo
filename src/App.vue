@@ -20,7 +20,7 @@
             </form>
             <div class="content-items">
                 <label v-if="todos.length > 0">Vazifalaringiz!</label>
-                <label v-if="todos.length === 0">Vazifa qo'shing!</label>
+                <label v-else>Vazifa qo'shing!</label>
                 <div class="content-item" v-for="(todo, index) in filteredTodos" :key="todo.id"
                     @click="toogleItem(index)">
                     <p :class="`${todo.done && 'passed'}`" v-if="editingIndex !== todo.id">{{ todo.name }}</p>
