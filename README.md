@@ -1,29 +1,39 @@
-# .
+<h1 align="center">✅ Vue.js – Todo List</h1>
 
-This template should help get you started developing with Vue 3 in Vite.
+<p align="center">
+  <img src="https://img.shields.io/badge/Vue-3-blue?style=for-the-badge&logo=vue.js" />
+  <img src="https://img.shields.io/badge/TailwindCSS-UI-blue?style=for-the-badge&logo=tailwindcss" />
+</p>
 
-## Recommended IDE Setup
+<p align="center"><strong>
+Vue.js bilan yaratilgan oddiy Todo List. Foydalanuvchilar vazifalarni qo‘shish, tahrirlash, o‘chirish va bajarilgan holatga keltirish imkoniyatiga ega.
+</strong></p>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Customize configuration
+## 🔑 Xususiyatlar
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- ➕ Yangi vazifalarni qo‘shish
+- ✏️ Vazifalarni tahrirlash
+- 🗑️ Vazifalarni o‘chirish
+- ✅ Vazifalarni bajarilgan holatga keltirish
+- 🔄 Vazifalar ro‘yxatini avtomatik yangilash
+- 🎨 TailwindCSS bilan zamonaviy va qulay dizayn
 
-## Project Setup
+---
 
-```sh
-npm install
-```
+## 🚀 Texnologiyalar
 
-### Compile and Hot-Reload for Development
+- **Vue 3** – UI framework
+- **Vue Router** – Routing
+- **TailwindCSS** – Styling
+- **Vite** – Build tool (shoshilinch ishlarni optimallashtirish)
 
-```sh
-npm run dev
-```
+---
 
-### Compile and Minify for Production
+## ⚙️ O‘rnatish
 
-```sh
-npm run build
-```
+1. Repository'ni klonlang:
+   ```bash
+   git clone https://github.com/the-ict/vuejs-todo.git
+   cd vuejs-todo-list
